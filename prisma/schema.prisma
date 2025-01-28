@@ -1,0 +1,109 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Pm25Data {
+  id        Int      @id @default(autoincrement())
+  pm25_1    String?
+  temp1     String?
+  hum1      String?
+  pres1     String?
+  pm25_2    String?
+  temp2     String?
+  hum2      String?
+  pres2     String?
+  pm25_3    String?
+  temp3     String?
+  hum3      String?
+  pres3     String?
+  pm25_4    String?
+  temp4     String?
+  hum4      String?
+  pres4     String?
+  pm25_5    String?
+  temp5     String?
+  hum5      String?
+  pres5     String?
+  pm25_6    String?
+  temp6     String?
+  hum6      String?
+  pres6     String?
+  pm25_7    String?
+  temp7     String?
+  hum7      String?
+  pres7     String?
+  pm25_8    String?
+  temp8     String?
+  hum8      String?
+  pres8     String?
+  pm25_9    String?
+  temp9     String?
+  hum9      String?
+  pres9     String?
+  pm25_0    String?
+  temp0     String?
+  hum0      String?
+  pres0     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("pm25datas")
+}
+
+model Co2 {
+  id        Int      @default(autoincrement()) @id
+  co2_1     String?  
+  temp1     String?  
+  hum1      String?
+  pres1     String?
+  co2_2     String?
+  temp2     String?  
+  hum2      String?  
+  pres2     String? 
+  co2_3     String?  
+  temp3     String?  
+  hum3      String?  
+  pres3     String?  
+  co2_4     String? 
+  temp4     String?  
+  hum4      String?
+  pres4     String?
+  co2_5     String?
+  temp5     String?  
+  hum5      String?
+  pres5     String?
+  co2_6     String?
+  temp6     String?  
+  hum6      String?
+  pres6     String?
+  co2_7     String?
+  temp7     String?  
+  hum7      String?
+  pres7     String?
+  co2_8     String?
+  temp8     String?  
+  hum8      String?
+  pres8     String?
+  co2_9     String?
+  temp9     String?  
+  hum9      String?
+  pres9     String?
+  co2_0     String?
+  temp0     String?
+  hum0      String?
+  pres0     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("@co2s")
+}
