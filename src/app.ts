@@ -1,5 +1,6 @@
 import express from "express";
 import Router from "./api/api_gateway";
+
 const app = express();
 app.use(express.json());
 
