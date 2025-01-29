@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "@pm25datas" (
+CREATE TABLE "pm25datas" (
     "id" SERIAL NOT NULL,
     "pm25_1" TEXT,
     "temp1" TEXT,
@@ -44,7 +44,7 @@ CREATE TABLE "@pm25datas" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "@pm25datas_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "pm25datas_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable

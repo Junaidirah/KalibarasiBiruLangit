@@ -8,30 +8,31 @@ class Pm25Controller {
   constructor(pm25UseCase: Pm25Usecase) {
     this.pm25Usecase = pm25UseCase;
   }
-  async createPm25(req: Request, res: Response) {
+  async createPm25(req: Request, res: Response): Promise<void> {
     try {
+      console.log("[DEBUG] Received body:", req.body);
       const pm25Data: Pm25Data = req.body;
       const newPm25 = await this.pm25Usecase.createPm25(pm25Data);
-      return res.status(201).json({
+      res.status(201).json({
         success: true,
         message: "[SUCCES] make data kalibrasi PM 2.5",
         dataKalib: newPm25,
       });
     } catch (e) {
       console.error("Error creating PM2.5 data:", e);
-      return res.status(500).json({
+      res.status(500).json({
         success: false,
         message: "Failed to create PM2.5 data",
         error: `${(e as Error).message}`,
       });
     }
   }
-  async getAllPm25(req: Request, res: Response) {
+  async getAllPm25(req: Request, res: Response): Promise<void> {
     try {
       const pm25s = await this.pm25Usecase.getAllPm25();
       const currentTime = moment().tz("Asia/Jakarta");
       const serverTime = currentTime.format("YYYY-MM-DD HH:mm:ss");
-      return res.status(200).json({
+      res.status(200).json({
         success: true,
         message: "[SUCCESS] Retrieved all PM 2.5 data",
         serverTime: {
@@ -42,7 +43,7 @@ class Pm25Controller {
       });
     } catch (e) {
       console.error("Error retrieving PM2.5 data:", e);
-      return res.status(500).json({
+      res.status(500).json({
         success: false,
         message: "Failed to retrieve PM2.5 data",
         error: `${(e as Error).message}`,
