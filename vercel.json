@@ -14,5 +14,8 @@
       "src": "/(.*)",
       "dest": "/src/index.ts"
     }
-  ]
+  ],
+  "env": {
+    "DISABLE_CACHE": "true"
+  }
 }
