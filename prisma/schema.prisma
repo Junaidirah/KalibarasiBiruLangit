@@ -55,6 +55,7 @@ model Pm25Data {
   temp0     String?
   hum0      String?
   pres0     String?
+  waktu_masuk String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -103,6 +104,7 @@ model Co2 {
   temp0     String?
   hum0      String?
   pres0     String?
+  waktu_masuk String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("@co2s")

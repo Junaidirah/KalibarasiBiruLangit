@@ -46,6 +46,7 @@ class Co2Repository {
           temp0: data.temp0,
           hum0: data.hum0,
           pres0: data.pres0,
+          waktu_masuk: data.waktu_masuk,
         },
       });
       return newCo2;
