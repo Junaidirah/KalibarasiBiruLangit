@@ -9,4 +9,4 @@ app.get("/", (req, res) => {
 });
 app.use("/api", Router);
 
-module.exports = app;
+export default app;
