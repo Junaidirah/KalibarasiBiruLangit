@@ -41,6 +41,7 @@ CREATE TABLE "pm25datas" (
     "temp0" TEXT,
     "hum0" TEXT,
     "pres0" TEXT,
+    "waktu_masuk" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -90,6 +91,7 @@ CREATE TABLE "@co2s" (
     "temp0" TEXT,
     "hum0" TEXT,
     "pres0" TEXT,
+    "waktu_masuk" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
