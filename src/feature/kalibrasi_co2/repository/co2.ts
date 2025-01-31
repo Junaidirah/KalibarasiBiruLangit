@@ -1,4 +1,4 @@
-import prisma from "../../../../config/database";
+import prisma from "../../../config/database";
 import { Co2 } from "@prisma/client";
 
 class Co2Repository {
