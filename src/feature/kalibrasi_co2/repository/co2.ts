@@ -57,11 +57,15 @@ class Co2Repository {
   }
   async getAllCo2() {
     try {
-      const co2s = await prisma.Co2.findMany();
-      return co2s;
+      const lastCo2 = await prisma.Co2.findFirst({
+        orderBy: {
+          waktu_masuk: "desc",
+        },
+      });
+      return lastCo2;
     } catch (e) {
       console.error("[FAILED] Fetch data Co2", e);
-      throw new Error(`[ERROR] Fetch Data C02${(e as Error).message}`);
+      throw new Error(`[ERROR] Fetch Data Co2 ${(e as Error).message}`);
     }
   }
 }
