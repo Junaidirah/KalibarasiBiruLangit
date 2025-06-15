@@ -15,46 +15,36 @@ datasource db {
 
 model Pm25Data {
   id        Int      @id @default(autoincrement())
-  pm25_1    String?
-  temp1     String?
-  hum1      String?
-  pres1     String?
-  pm25_2    String?
-  temp2     String?
-  hum2      String?
-  pres2     String?
-  pm25_3    String?
-  temp3     String?
-  hum3      String?
-  pres3     String?
-  pm25_4    String?
-  temp4     String?
-  hum4      String?
-  pres4     String?
-  pm25_5    String?
-  temp5     String?
-  hum5      String?
-  pres5     String?
-  pm25_6    String?
-  temp6     String?
-  hum6      String?
-  pres6     String?
-  pm25_7    String?
-  temp7     String?
-  hum7      String?
-  pres7     String?
-  pm25_8    String?
-  temp8     String?
-  hum8      String?
-  pres8     String?
-  pm25_9    String?
-  temp9     String?
-  hum9      String?
-  pres9     String?
-  pm25_0    String?
-  temp0     String?
-  hum0      String?
-  pres0     String?
+  pm25_1     String?
+  pm25_2     String?
+  pm25_3     String?
+  pm25_4     String?
+  pm25_5     String?
+  pm25_6     String?
+  pm25_7     String?
+  pm25_8     String?
+  pm25_9     String?
+  pm25_10    String?
+  pm25_11    String?
+  pm25_12    String?
+  pm25_13    String?
+  pm25_14    String?
+  pm25_15    String?
+  pm25_16    String?
+  pm25_17    String?
+  pm25_18    String?
+  pm25_19    String?
+  pm25_20    String?
+  pm25_21    String?
+  pm25_22    String?
+  pm25_23    String?
+  pm25_24    String?
+  pm25_25    String?
+  pm25_26    String?
+  pm25_27    String?
+  pm25_28    String?
+  pm25_29    String?
+  pm25_30    String?
   waktu_masuk String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -108,4 +98,53 @@ model Co2 {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("@co2s")
+}
+
+
+model N02Data {
+  id        Int      @id@default(autoincrement())
+  no2_1     String?
+  no2_2     String?
+  no2_3     String?
+  no2_4     String?
+  no2_5     String?
+  no2_6     String?
+  no2_7     String?
+  no2_8     String?
+  no2_9     String?
+  no2_10    String?
+  no2_11    String?
+  no2_12    String?
+  no2_13    String?
+  no2_14    String?
+  no2_15    String?
+  no2_16    String?
+  no2_17    String?
+  no2_18    String?
+  no2_19    String?
+  no2_20    String?
+  no2_21    String?
+  no2_22    String?
+  no2_23    String?
+  no2_24    String?
+  no2_25    String?
+  no2_26    String?
+  no2_27    String?
+  no2_28    String?
+  no2_29    String?
+  no2_30    String?
+  waktu_masuk String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("no2datas")
+}
+
+
+model Sht {
+  id        Int      @id@default(autoincrement())
+  suhu      String?
+  temperature String?
+  waktu_masuk String?
+  @@map("shts")
 }

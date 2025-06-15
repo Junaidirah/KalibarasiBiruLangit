@@ -7,6 +7,6 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
-app.use("/api", Router);
+app.use("/api/kolokasi/vs", Router);
 
 export default app;
