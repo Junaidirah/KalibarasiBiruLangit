@@ -10,5 +10,5 @@ app.use(express_1.default.json());
 app.get("/", (req, res) => {
     res.send("Hello, World!");
 });
-app.use("/api", api_gateway_1.default);
+app.use("/api/kolokasi/vs", api_gateway_1.default);
 exports.default = app;

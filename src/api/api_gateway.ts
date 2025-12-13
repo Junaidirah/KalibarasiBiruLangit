@@ -15,6 +15,8 @@ import No2Usecase from "../feature/no2/usecase/crud";
 import ShtController from "../feature/sht/controller/crud_controller";
 import ShtUseCase from "../feature/sht/usecase/crud";
 import ShtRepo from "../feature/sht/repository/crud_sht";
+// AQMS
+import aqmsRoutes from "../feature/aqms/routes/aqms.routes";
 
 const Router = express.Router();
 //Declaration PM2.5
@@ -61,5 +63,7 @@ Router.post("/sht", (req: Request, res: Response) =>
 Router.get("/sht", (req: Request, res: Response) =>
   shtController.getAllSht(req, res)
 );
+//AQMS - dengan rate limiting dan security middleware
+Router.use("/aqms", aqmsRoutes);
 
 export default Router;

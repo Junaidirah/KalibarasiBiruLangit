@@ -73,12 +73,16 @@ class Co2Repository {
     getAllCo2() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const co2s = yield database_1.default.Co2.findMany();
-                return co2s;
+                const lastCo2 = yield database_1.default.Co2.findFirst({
+                    orderBy: {
+                        waktu_masuk: "desc",
+                    },
+                });
+                return lastCo2;
             }
             catch (e) {
                 console.error("[FAILED] Fetch data Co2", e);
-                throw new Error(`[ERROR] Fetch Data C02${e.message}`);
+                throw new Error(`[ERROR] Fetch Data Co2 ${e.message}`);
             }
         });
     }
